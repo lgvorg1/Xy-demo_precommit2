@@ -12,8 +12,8 @@ fi
 #ls -laR /home/ubuntu/LGV/precommit
 # Configure the scan to fail when at least one critical issue found
 #xygeni secrets -d /home/ubuntu/LGV/precommit --all-files --fail-on="critical"
-#xygeni -q secrets -d . --staged-files --fail-on=high --no-stdin --format text --output ./.secrets.txt
-xygeni -q secrets -d . --staged-files --fail-on=high --format text --output ./.secrets.txt
+xygeni -q secrets -d . --staged-files --fail-on=high --no-stdin --format text --output ./.secrets.txt
+#xygeni -q secrets -d . --staged-files --fail-on=high --format text --output ./.secrets.txt
 EXIT_CODE=$?
 
 if [[ $EXIT_CODE -gt 127 ]]; then
