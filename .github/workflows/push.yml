@@ -55,6 +55,6 @@ jobs:
       - name: Execution Xygeni Scanner (vuln)
         run: |
           echo Executing Xygeni scan ....    
-          ${GITHUB_WORKSPACE}/scanner/xygeni -q -u secrets -d . --staged-files --fail-on=high --no-stdin --format text --output ./.secrets.txt
+          ${GITHUB_WORKSPACE}/scanner/xygeni secrets -u -d . --staged-files --fail-on=high --no-stdin --format text --output ./.secrets.txt
         env:
           GITHUB_PAT: ${{ secrets.GH_PAT }}
